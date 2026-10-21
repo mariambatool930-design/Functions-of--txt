@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Styler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text Styler</h1>
+
+    <div id="textArea" contenteditable="true">
+      Click the buttons below to change how this text looks. You can also edit this text.
+    </div>
+
+    <div class="controls">
+
+      <div class="group">
+        <h3>Text Color</h3>
+        <button onclick="setColor('red')">Red</button>
+        <button onclick="setColor('blue')">Blue</button>
+        <button onclick="setColor('green')">Green</button>
+        <button onclick="setColor('purple')">Purple</button>
+      </div>
+
+      <div class="group">
+        <h3>Font Size</h3>
+        <button onclick="changeSize(2)">Increase +</button>
+        <button onclick="changeSize(-2)">Decrease -</button>
+      </div>
+
+      <div class="group">
+        <h3>Font Family</h3>
+        <button onclick="setFont('Arial, sans-serif')">Arial</button>
+        <button onclick="setFont('Georgia, serif')">Georgia</button>
+        <button onclick="setFont('\'Courier New\', monospace')">Courier New</button>
+      </div>
+
+      <div class="group">
+        <h3>Text Decoration</h3>
+        <button onclick="toggleDecoration('underline')">Underline</button>
+        <button onclick="toggleDecoration('overline')">Overline</button>
+        <button onclick="toggleDecoration('line-through')">Line-through</button>
+        <button onclick="clearDecoration()">Remove All</button>
+      </div>
+
+      <div class="group">
+        <h3>Bold / Italic</h3>
+        <button onclick="toggleBold()">Bold</button>
+        <button onclick="toggleItalic()">Italic</button>
+      </div>
+
+      <div class="group">
+        <h3>Alignment</h3>
+        <button onclick="setAlign('left')">Left</button>
+        <button onclick="setAlign('center')">Center</button>
+        <button onclick="setAlign('right')">Right</button>
+      </div>
+
+      <div class="group">
+        <h3>Letter Case</h3>
+        <button onclick="setCase('uppercase')">Uppercase</button>
+        <button onclick="setCase('lowercase')">Lowercase</button>
+      </div>
+
+      <div class="group">
+        <h3>Background Color</h3>
+        <button onclick="setBg('#ffe08a')">Yellow</button>
+        <button onclick="setBg('#bfe6ff')">Light Blue</button>
+        <button onclick="setBg('#c8f0c8')">Light Green</button>
+        <button onclick="setBg('#ffd0e0')">Pink</button>
+      </div>
+
+      <div class="group">
+        <h3>Theme</h3>
+        <button id="themeBtn" onclick="toggleTheme()">Switch to Dark Mode</button>
+      </div>
+
+      <div class="group">
+        <button class="reset" onclick="resetAll()">Reset</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
